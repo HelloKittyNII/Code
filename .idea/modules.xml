@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Code.iml" filepath="$PROJECT_DIR$/.idea/modules/Code.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/client/client.iml" filepath="$PROJECT_DIR$/.idea/modules/client/client.iml" group="client" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/client/client_main.iml" filepath="$PROJECT_DIR$/.idea/modules/client/client_main.iml" group="client" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/client/client_test.iml" filepath="$PROJECT_DIR$/.idea/modules/client/client_test.iml" group="client" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/client/desktop/desktop.iml" filepath="$PROJECT_DIR$/.idea/modules/client/desktop/desktop.iml" group="client/desktop" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/client/desktop/desktop_main.iml" filepath="$PROJECT_DIR$/.idea/modules/client/desktop/desktop_main.iml" group="client/desktop" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/client/desktop/desktop_test.iml" filepath="$PROJECT_DIR$/.idea/modules/client/desktop/desktop_test.iml" group="client/desktop" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,4 @@
+rootProject.name = 'Code'
+include 'client:desktop'
+findProject(':client:desktop')?.name = 'desktop'
+
