@@ -1,18 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import java.net.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import java.net.URL?>
 
-<AnchorPane fx:id="coeltentPanel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="362.0" prefWidth="600.0" style="-fx-background-color: #5789DC;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="coeltentPanel"
+            fx:controller="com.nii.desktop.controller.LoginUIController"
+            maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="362.0" prefWidth="615.0" style="-fx-background-color: #5789DC;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <ImageView fitHeight="364.0" fitWidth="245.0" layoutX="14.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../image/login_left.png" />
          </image>
       </ImageView>
+      <Label layoutX="268.0" layoutY="75.0" text="UserName" textFill="#f5f2f2">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="268.0" layoutY="151.0" text="Password" textFill="#f5f2f2">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField layoutX="398.0" layoutY="80.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextField layoutX="398.0" layoutY="156.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <Button fx:id="entryButton" layoutX="286.0" layoutY="238.0" mnemonicParsing="false" onAction="#entryButtonClickAction" prefHeight="46.0" prefWidth="121.0" text="Entry">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Button>
+      <Button fx:id="clearButton" layoutX="447.0" layoutY="238.0" mnemonicParsing="false" onAction="#clearButtonClickAction" prefHeight="46.0" prefWidth="121.0" text="Clear">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Button>
    </children>
 
     <stylesheets>
