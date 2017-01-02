@@ -85,21 +85,12 @@ public final class AlertUtil
      */
     public static boolean alertConfirmLater(final String message)
     {
-        boolean result = false;
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle(CommonConstant.ALERT_CONFIRM_TITLE);
+        alert.setContentText(message);
+        alert.setHeaderText(null);
+        Optional<ButtonType> confirm = alert.showAndWait();
 
-        Platform.runLater(new Runnable()
-        {
-            @Override
-            public void run()
-            {
-                Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-                alert.setTitle(CommonConstant.ALERT_CONFIRM_TITLE);
-                alert.setContentText(message);
-                alert.setHeaderText(null);
-                Optional<ButtonType> confirm = alert.showAndWait()
-
-                result =  confirm.get() == ButtonType.OK;
-            }
-        });
+        return  confirm.get() == ButtonType.OK;
     }
 }

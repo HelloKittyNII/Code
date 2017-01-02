@@ -2,6 +2,7 @@ package com.nii.desktop;
 
 import com.nii.desktop.type.CommonConstant;
 import com.nii.desktop.util.ui.ResourceLoader;
+import com.nii.desktop.util.ui.UIManager;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -32,7 +33,7 @@ public class Start extends Application
     public void start(Stage primaryStage) throws Exception
     {
         primaryStage.setTitle(CommonConstant.LOGIN_WINDOW_TITLE);
-
+        UIManager.setPrimaryStage(primaryStage);
 
         Pane pane = (Pane) FXMLLoader.load(ResourceLoader.getFxmlResource("LoginUI.fxml"));
         Scene scene = new Scene(pane);

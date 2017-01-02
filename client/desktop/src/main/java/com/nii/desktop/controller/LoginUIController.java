@@ -1,12 +1,25 @@
 package com.nii.desktop.controller;
 
+import com.nii.desktop.model.host.HostServer;
+import com.nii.desktop.type.PropertiesConstant;
+import com.nii.desktop.util.conf.DefaultConfUtil;
 import com.nii.desktop.util.ui.AlertUtil;
 import com.nii.desktop.util.ui.ResourceBundleUtil;
+import com.nii.desktop.util.ui.ResourceLoader;
+import com.nii.desktop.util.ui.UIManager;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
+import javafx.scene.control.ChoiceDialog;
+import javafx.scene.control.Dialog;
+import javafx.scene.layout.Pane;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -46,15 +59,52 @@ public class LoginUIController implements Initializable
     @FXML
     private void clearButtonClickAction()
     {
+        System.out.println(AlertUtil.alertConfirmLater(ResourceBundleUtil.getStringValue("login.failed")));
+    }
 
-
-        new Thread(new Runnable()
+    /**
+     * click config button
+     */
+    @FXML
+    private void configButtonClickAction()
+    {
+        HostServer hostServer = new HostServer("10.10.10.10");
+        if(showHoserServerDialog(hostServer))
         {
-            @Override
-            public void run()
-            {
-                System.out.println(AlertUtil.alertConfirmLater(ResourceBundleUtil.getStringValue("login.failed")));
-            }
-        }).start();
+            AlertUtil.alertInfoLater(hostServer.getServerName());
+        }
+    }
+
+    private boolean showHoserServerDialog(HostServer hostServer)
+    {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(ResourceLoader.getFxmlResource("HostServerDialog.fxml"));
+
+        Pane page = null;
+        try
+        {
+            page = (Pane) loader.load();
+        }
+        catch (IOException e)
+        {
+            LOGGER.error("Load HostServerDialog.fxml failed.",e);
+            return false;
+        }
+
+        Stage dialogStage = new Stage();
+        dialogStage.setTitle("Config Host Server");
+
+        dialogStage.initModality(Modality.WINDOW_MODAL);
+        dialogStage.initOwner(UIManager.getPrimaryStage());
+        Scene scene = new Scene(page);
+        dialogStage.setScene(scene);
+
+        HostServerDialog<HostServer> controller = loader.getController();
+        controller.setDialogStage(dialogStage);
+        controller.setParam(hostServer);
+
+        dialogStage.showAndWait();
+
+        return controller.isOkClicked();
     }
 }
