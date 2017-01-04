@@ -32,14 +32,9 @@ public class Start extends Application
      */
     public void start(Stage primaryStage) throws Exception
     {
-        primaryStage.setTitle(CommonConstant.LOGIN_WINDOW_TITLE);
         UIManager.setPrimaryStage(primaryStage);
 
-        Pane pane = (Pane) FXMLLoader.load(ResourceLoader.getFxmlResource("LoginUI.fxml"));
-        Scene scene = new Scene(pane);
-        primaryStage.setScene(scene);
-
-        primaryStage.show();
+        UIManager.switchLoginUI();
     }
 
     public static void main(String[] args)

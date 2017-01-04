@@ -1,6 +1,6 @@
 package com.nii.desktop.controller;
 
-import com.nii.desktop.core.dialog.ModalDialog;
+import com.nii.desktop.widget.dialog.ModalDialog;
 import com.nii.desktop.model.host.HostServer;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;

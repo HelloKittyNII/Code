@@ -1,6 +1,7 @@
 package com.nii.desktop.controller;
 
 import com.nii.desktop.model.host.HostServer;
+import com.nii.desktop.type.CommonConstant;
 import com.nii.desktop.type.PropertiesConstant;
 import com.nii.desktop.util.conf.DefaultConfUtil;
 import com.nii.desktop.util.ui.AlertUtil;
@@ -11,11 +12,14 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceDialog;
 import javafx.scene.control.Dialog;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -29,7 +33,17 @@ import java.util.ResourceBundle;
  */
 public class LoginUIController implements Initializable
 {
+    /**
+     * 日志
+     */
     private final static Logger LOGGER = LoggerFactory.getLogger(LoginUIController.class);
+
+    @FXML
+    private TextField userNameTextField;
+
+    @FXML
+    private TextField passwordTextField;
+
 
     /**
      * Called to initialize a controller after its root element has been
@@ -50,7 +64,13 @@ public class LoginUIController implements Initializable
     @FXML
     private void entryButtonClickAction()
     {
-        AlertUtil.alertErrorLater(ResourceBundleUtil.getStringValue("login.failed"));
+        if (!(StringUtils.equals(userNameTextField.getText(),"wzj")
+                && StringUtils.equals(passwordTextField.getText(),"1111")))
+        {
+            AlertUtil.alertErrorLater(ResourceBundleUtil.getStringValue("login.failed"));
+        }
+
+        UIManager.switchMainUI();
     }
 
     /**
@@ -59,7 +79,8 @@ public class LoginUIController implements Initializable
     @FXML
     private void clearButtonClickAction()
     {
-        System.out.println(AlertUtil.alertConfirmLater(ResourceBundleUtil.getStringValue("login.failed")));
+        userNameTextField.clear();
+        passwordTextField.clear();
     }
 
     /**

@@ -1,4 +1,4 @@
-package com.nii.desktop.core.dialog;
+package com.nii.desktop.widget.dialog;
 
 import javafx.stage.Stage;
 
