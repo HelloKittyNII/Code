@@ -64,10 +64,10 @@ public class LoginUIController implements Initializable
     @FXML
     private void entryButtonClickAction()
     {
-        if (!(StringUtils.equals(userNameTextField.getText(),"wzj")
-                && StringUtils.equals(passwordTextField.getText(),"1111")))
+        if (!(StringUtils.equals(userNameTextField.getText(), "wzj") && StringUtils.equals(passwordTextField.getText(), "1111")))
         {
             AlertUtil.alertErrorLater(ResourceBundleUtil.getStringValue("login.failed"));
+            return;
         }
 
         UIManager.switchMainUI();
@@ -90,7 +90,7 @@ public class LoginUIController implements Initializable
     private void configButtonClickAction()
     {
         HostServer hostServer = new HostServer("10.10.10.10");
-        if(showHoserServerDialog(hostServer))
+        if (showHoserServerDialog(hostServer))
         {
             AlertUtil.alertInfoLater(hostServer.getServerName());
         }
@@ -108,7 +108,7 @@ public class LoginUIController implements Initializable
         }
         catch (IOException e)
         {
-            LOGGER.error("Load HostServerDialog.fxml failed.",e);
+            LOGGER.error("Load HostServerDialog.fxml failed.", e);
             return false;
         }
 

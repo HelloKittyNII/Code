@@ -25,6 +25,8 @@ public class HostServerDialog<R> extends ModalDialog
 
         isOkClicked = true;
         dialogStage.close();
+
+
     }
 
     /**
