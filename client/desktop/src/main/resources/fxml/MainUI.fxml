@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
+<?import javafx.scene.web.*?>
 <?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
@@ -34,9 +36,35 @@
             </content>
           </Tab>
           <Tab text="DTS">
-            <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-            </content>
+               <content>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0">
+                     <top>
+                        <HBox prefHeight="49.0" prefWidth="531.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <TextField fx:id="urlTextField" onAction="#urlTextFieldAction" prefHeight="29.0" prefWidth="415.0" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <Button fx:id="goBt" mnemonicParsing="false" onAction="#goBtClickAction" prefHeight="29.0" prefWidth="75.0" text="Go">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="5.0" top="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </top>
+                     <center>
+                        <WebView fx:id="webview" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+                     </center>
+                  </BorderPane>
+               </content>
           </Tab>
         </tabs>
       </TabPane>

@@ -7,6 +7,8 @@ import com.nii.desktop.signal.type.DeviceEventType;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TextField;
+import javafx.scene.web.WebEngine;
+import javafx.scene.web.WebView;
 
 import java.net.URL;
 import java.util.EventListener;
@@ -18,6 +20,9 @@ import java.util.UUID;
  */
 public class MainUIController implements Initializable
 {
+    /**
+     * 设备对象
+     */
     private AdbDevice adbDevice = new AdbDevice();
 
     /**
@@ -31,6 +36,19 @@ public class MainUIController implements Initializable
      */
     @FXML
     private TextField nameTextField;
+
+    @FXML
+    private WebView webview;
+
+    @FXML
+    private TextField urlTextField;
+
+    /**
+     * web engine
+     */
+    WebEngine webEngine;
+
+
 
     /**
      * Called to initialize a controller after its root element has been
@@ -47,6 +65,8 @@ public class MainUIController implements Initializable
 
         numTextField.setEditable(false);
         adbDevice.setDeviceNumber(0);
+
+        webEngine = webview.getEngine();
     }
 
 
@@ -93,4 +113,21 @@ public class MainUIController implements Initializable
         adbDevice.setDeviceName(UUID.randomUUID().toString());
     }
 
+    /**
+     * 回车事件
+     */
+    @FXML
+    private void urlTextFieldAction()
+    {
+        goBtClickAction();
+    }
+
+    /**
+     * Go按钮点击事件
+     */
+    @FXML
+    private void goBtClickAction()
+    {
+        webEngine.load(urlTextField.getText());
+    }
 }
