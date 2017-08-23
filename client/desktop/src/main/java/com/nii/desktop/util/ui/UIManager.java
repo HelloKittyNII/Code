@@ -1,5 +1,6 @@
 package com.nii.desktop.util.ui;
 
+import com.nii.desktop.decorate.StageDecorate;
 import com.nii.desktop.type.CommonConstant;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Rectangle2D;
@@ -8,6 +9,7 @@ import javafx.scene.control.SplitPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -22,6 +24,11 @@ public final class UIManager
      * 日志
      */
     private final static Logger LOGGER = LoggerFactory.getLogger(UIManager.class);
+
+    /**
+     * title的个高度
+     */
+    private final static int MAIN_TITLE_HEIGHT = 70;
 
     /**
      * 系统stage
@@ -53,6 +60,9 @@ public final class UIManager
     {
         primaryStage.setTitle(CommonConstant.LOGIN_WINDOW_TITLE);
 
+        //隐藏标题栏
+        primaryStage.initStyle(StageStyle.TRANSPARENT);
+
         Pane pane = null;
         try
         {
@@ -76,6 +86,7 @@ public final class UIManager
     {
         primaryStage.setTitle(CommonConstant.LOGIN_WINDOW_TITLE);
 
+
         SplitPane pane = null;
         try
         {
@@ -86,8 +97,8 @@ public final class UIManager
             LOGGER.error("Switch main UI failed",e);
         }
 
-        Scene scene = new Scene(pane);
-        primaryStage.setScene(scene);
+        StageDecorate.decorate(primaryStage,pane,MAIN_TITLE_HEIGHT);
+
         setStageOnCenter();
         primaryStage.show();
     }

@@ -1,4 +1,4 @@
-package com.nii.desktop.controller;
+package com.nii.desktop.dialog;
 
 import com.nii.desktop.widget.dialog.ModalDialog;
 import com.nii.desktop.model.host.HostServer;

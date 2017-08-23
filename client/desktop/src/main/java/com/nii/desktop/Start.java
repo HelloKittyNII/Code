@@ -1,5 +1,6 @@
 package com.nii.desktop;
 
+import com.nii.desktop.adb.DeviceManager;
 import com.nii.desktop.type.CommonConstant;
 import com.nii.desktop.util.ui.ResourceLoader;
 import com.nii.desktop.util.ui.UIManager;
@@ -34,11 +35,25 @@ public class Start extends Application
     {
         UIManager.setPrimaryStage(primaryStage);
 
+        startDeviceManager();
+
         UIManager.switchLoginUI();
     }
 
     public static void main(String[] args)
     {
         launch(args);
+    }
+
+    private void startDeviceManager()
+    {
+        new Thread(new Runnable()
+        {
+            @Override
+            public void run()
+            {
+                DeviceManager.getInstance().start();
+            }
+        }).start();
     }
 }

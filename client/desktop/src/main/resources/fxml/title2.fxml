@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="rootPane" prefHeight="70.0" stylesheets="/css/title.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.nii.desktop.controller.TitleController">
+   <children>
+      <HBox fx:id="banner" maxHeight="70.0" minHeight="70.0" prefHeight="70.0" VBox.vgrow="ALWAYS">
+         <children>
+            <AnchorPane prefHeight="70.0" HBox.hgrow="ALWAYS" />
+            <HBox alignment="TOP_RIGHT">
+               <children>
+                  <Button fx:id="menuButton" mnemonicParsing="false" onAction="#menuButtonClickAction" prefHeight="25.0" prefWidth="25.0">
+                     <HBox.margin>
+                        <Insets right="10.0" top="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="minButton" mnemonicParsing="false" onAction="#minButtonClickAction" prefHeight="25.0" prefWidth="25.0">
+                     <HBox.margin>
+                        <Insets right="10.0" top="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="maxButton" mnemonicParsing="false" onAction="#maxButtonClickAction" prefHeight="25.0" prefWidth="25.0">
+                     <HBox.margin>
+                        <Insets right="10.0" top="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="closeButton" mnemonicParsing="false" onAction="#closeButtonCilciAction" prefHeight="25.0" prefWidth="25.0">
+                     <padding>
+                        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets right="10.0" top="5.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>
