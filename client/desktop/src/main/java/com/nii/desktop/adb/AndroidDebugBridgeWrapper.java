@@ -1,7 +1,6 @@
 package com.nii.desktop.adb;
 
 import com.android.ddmlib.AndroidDebugBridge;
-import com.android.ddmlib.IDevice;
 
 /**
  * Created by wzj on 2017/8/21.

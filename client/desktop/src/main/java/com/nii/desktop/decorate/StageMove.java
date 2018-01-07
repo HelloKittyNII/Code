@@ -8,13 +8,13 @@ import javafx.stage.Stage;
 /**
  * Created by wzj on 2016-03-03.
  */
-public class StageDrager
+public class StageMove
 {
 
     private Stage stage;
     private Light.Point point = new Light.Point();
 
-    public StageDrager(Stage stage)
+    public StageMove(Stage stage)
     {
         this.stage = stage;
     }

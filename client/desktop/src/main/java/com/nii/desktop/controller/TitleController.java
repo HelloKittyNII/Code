@@ -1,8 +1,7 @@
 package com.nii.desktop.controller;
 
-import com.nii.desktop.decorate.StageDrager;
+import com.nii.desktop.decorate.StageMove;
 import com.nii.desktop.widget.menu.GlobalMenu;
-import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.geometry.Side;
@@ -53,7 +52,7 @@ public class TitleController
         this.stage = stage;
         bannerClickAction();
         banner.setPrefHeight(height);
-        new StageDrager(this.stage).bindDrag(banner);
+        new StageMove(this.stage).bindDrag(banner);
     }
 
     public void addContent(Parent content)

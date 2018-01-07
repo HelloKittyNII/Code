@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="400.0" prefWidth="534.0" stylesheets="@../css/TableViewTestCss.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.nii.desktop.controller.TableViewTestController">
+   <children>
+      <TableView fx:id="studentTableView">
+        <columns>
+          <TableColumn fx:id="nameCol" prefWidth="75.0" text="Name" />
+          <TableColumn fx:id="ageCol" prefWidth="75.0" text="Age" />
+            <TableColumn fx:id="descCol" prefWidth="75.0" text="Desc" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </children>
+</VBox>

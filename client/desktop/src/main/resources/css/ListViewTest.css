@@ -1,0 +1,5 @@
+.list-cell{
+    -fx-text-fill: #292e34;
+    -fx-font-family: Arial;
+    -fx-pref-height: 30px;
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.VBox?>
+<VBox alignment="CENTER" stylesheets="@../css/ListViewTest.css" xmlns="http://javafx.com/javafx/8"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.nii.desktop.controller.ListViewTestController">
+   <children>
+      <ListView fx:id="studentListView" maxWidth="500.0" minWidth="500.0" prefHeight="300.0" prefWidth="490.0" />
+   </children>
+</VBox>

@@ -1,5 +1,6 @@
 package com.nii.desktop.controller;
 
+import com.nii.desktop.decorate.StageMove;
 import com.nii.desktop.dialog.HostServerDialog;
 import com.nii.desktop.model.host.HostServer;
 import com.nii.desktop.util.ui.AlertUtil;
@@ -11,6 +12,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -39,6 +41,12 @@ public class LoginUIController implements Initializable
     @FXML
     private TextField passwordTextField;
 
+    /**
+     * 下面面板
+     */
+    @FXML
+    private AnchorPane contentPanel;
+
 
     /**
      * Called to initialize a controller after its root element has been
@@ -50,7 +58,7 @@ public class LoginUIController implements Initializable
      */
     public void initialize(URL location, ResourceBundle resources)
     {
-
+        new StageMove(UIManager.getPrimaryStage()).bindDrag(contentPanel);
     }
 
     /**

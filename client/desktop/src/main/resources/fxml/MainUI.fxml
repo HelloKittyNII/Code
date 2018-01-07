@@ -10,7 +10,7 @@
 <SplitPane dividerPositions="0.27148703956343795" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="628.0" prefWidth="735.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.nii.desktop.controller.MainUIController">
   <items>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="626.0" prefWidth="221.0" />
-      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+      <TabPane fx:id="tabPane" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
           <Tab text="Device">
             <content>
