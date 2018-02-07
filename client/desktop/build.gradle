@@ -3,7 +3,6 @@ version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
 
-sourceCompatibility = 1.5
 
 
 dependencies {
@@ -11,4 +10,10 @@ dependencies {
     compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.7'
     compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.22'
     compile group: 'org.slf4j', name: 'slf4j-simple', version: '1.6.1'
+
+    // https://mvnrepository.com/artifact/com.android.tools.ddms/ddmlib
+    compile group: 'com.android.tools.ddms', name: 'ddmlib', version: '25.3.0'
+
+    // https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.0'
 }

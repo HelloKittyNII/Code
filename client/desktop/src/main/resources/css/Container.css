@@ -1,0 +1,10 @@
+/*.root{*/
+    /*-fx-accent:  blue;*/
+
+    /*-fx-focus-color: blue;*/
+/*}*/
+
+.rootPane{
+    -fx-border-color: red;
+}
+

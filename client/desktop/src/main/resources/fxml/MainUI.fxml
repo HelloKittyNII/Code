@@ -7,7 +7,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<SplitPane dividerPositions="0.27148703956343795" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="628.0" prefWidth="735.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.nii.desktop.controller.MainUIController">
+<SplitPane dividerPositions="0.27148703956343795"  prefHeight="600.0" prefWidth="800.0" style="-fx-border-color: red" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.nii.desktop.controller.MainUIController">
   <items>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="626.0" prefWidth="221.0" />
       <TabPane fx:id="tabPane" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
@@ -32,7 +32,8 @@
                            </font>
                         </TextField>
                         <TextField fx:id="nameTextField" layoutX="87.0" layoutY="309.0" prefHeight="33.0" prefWidth="347.0" />
-                     </children></AnchorPane>
+                     </children>
+                  </AnchorPane>
             </content>
           </Tab>
           <Tab text="DTS">
