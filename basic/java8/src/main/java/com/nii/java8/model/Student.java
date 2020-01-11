@@ -74,4 +74,14 @@ public class Student implements Serializable {
     public void setHigh(boolean high) {
         isHigh = high;
     }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", isHigh=" + isHigh +
+                ", mathScore=" + mathScore +
+                '}';
+    }
 }
