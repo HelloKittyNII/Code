@@ -2,10 +2,14 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
+      <module name="basic_main" target="1.8" />
+      <module name="basic_test" target="1.8" />
       <module name="client_main" target="1.8" />
       <module name="client_test" target="1.8" />
       <module name="desktop_main" target="1.8" />
       <module name="desktop_test" target="1.8" />
+      <module name="java8_main" target="1.8" />
+      <module name="java8_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

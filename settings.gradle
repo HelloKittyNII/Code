@@ -1,4 +1,5 @@
 rootProject.name = 'Code'
 include 'client:desktop'
+include 'basic:java8'
 findProject(':client:desktop')?.name = 'desktop'
 

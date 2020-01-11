@@ -9,6 +9,8 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/basic" />
+            <option value="$PROJECT_DIR$/basic/java8" />
             <option value="$PROJECT_DIR$/client" />
             <option value="$PROJECT_DIR$/client/desktop" />
           </set>

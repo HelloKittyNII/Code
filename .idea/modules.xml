@@ -3,12 +3,18 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Code.iml" filepath="$PROJECT_DIR$/.idea/modules/Code.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/basic/basic.iml" filepath="$PROJECT_DIR$/.idea/modules/basic/basic.iml" group="basic" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/basic/basic_main.iml" filepath="$PROJECT_DIR$/.idea/modules/basic/basic_main.iml" group="basic" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/basic/basic_test.iml" filepath="$PROJECT_DIR$/.idea/modules/basic/basic_test.iml" group="basic" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/client/client.iml" filepath="$PROJECT_DIR$/.idea/modules/client/client.iml" group="client" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/client/client_main.iml" filepath="$PROJECT_DIR$/.idea/modules/client/client_main.iml" group="client" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/client/client_test.iml" filepath="$PROJECT_DIR$/.idea/modules/client/client_test.iml" group="client" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/client/desktop/desktop.iml" filepath="$PROJECT_DIR$/.idea/modules/client/desktop/desktop.iml" group="client/desktop" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/client/desktop/desktop_main.iml" filepath="$PROJECT_DIR$/.idea/modules/client/desktop/desktop_main.iml" group="client/desktop" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/client/desktop/desktop_test.iml" filepath="$PROJECT_DIR$/.idea/modules/client/desktop/desktop_test.iml" group="client/desktop" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/basic/java8/java8.iml" filepath="$PROJECT_DIR$/.idea/modules/basic/java8/java8.iml" group="basic/java8" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/basic/java8/java8_main.iml" filepath="$PROJECT_DIR$/.idea/modules/basic/java8/java8_main.iml" group="basic/java8" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/basic/java8/java8_test.iml" filepath="$PROJECT_DIR$/.idea/modules/basic/java8/java8_test.iml" group="basic/java8" />
     </modules>
   </component>
 </project>
