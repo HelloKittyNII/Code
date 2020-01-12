@@ -5,8 +5,7 @@ import com.nii.java8.model.Student;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 /**
@@ -25,7 +24,8 @@ public class StreamTest {
     public void before() {
         studentList = Lists.newArrayList(new Student(21, "张三", false, 89.1),
                 new Student(1, "李四", true, 90.0),
-                new Student(2, "赵六", true, 60.0));
+                new Student(2, "赵六", true, 60.0),
+                new Student(25, "张八", false, 60.0));
     }
 
     /**
@@ -52,7 +52,7 @@ public class StreamTest {
     }
 
     /**
-     * 过滤 filter
+     * 过滤 filter match
      */
     @Test
     public void filterTest() {
@@ -63,12 +63,82 @@ public class StreamTest {
         //过滤身高
         List<Student> student2 = studentList.stream().filter(Student::isHigh).collect(Collectors.toList());
         System.out.println(student2);
+
+        //匹配是不是所有名字都叫张三
+        boolean allMatch = studentList.stream().allMatch(student -> Objects.equals("张三", student.getName()));
+        System.out.println(allMatch);
+
+        //匹配是不是有叫张三
+        boolean anyMatch = studentList.stream().anyMatch(student -> Objects.equals("张三", student.getName()));
+        System.out.println(anyMatch);
+
+        //找到名字叫张三的学生
+        Student student1 = studentList.stream().filter(student -> Objects.equals("张三", student.getName())).findAny().orElse(null);
+        System.out.println(student1);
     }
 
     /**
-     * map
+     * map  distinct flatMap reduce
      */
-    public void mapTest(){
+    @Test
+    public void mapTest() {
+        //获取分数列表，去重
+        List<Double> scoreList = studentList.stream().map(Student::getMathScore).distinct().collect(Collectors.toList());
+        System.out.println(scoreList);
 
+        //转成map，如果key重复，取第一个
+        Map<Double, Student> collectMap = studentList.stream().collect(Collectors.toMap(Student::getMathScore,
+                student -> student, (stu1, stu2) -> stu1));
+        System.out.println(collectMap);
+
+        //flatMap 对map数据组合
+        List<String> stringList = Lists.newArrayList("china", "good");
+        List<String> collect = stringList.stream().flatMap(s -> Arrays.stream(s.split(""))).collect(Collectors.toList());
+        System.out.println(collect);
+
+        //reduce 对列表数据分组处理
+        Double sumScore = studentList.stream().map(Student::getMathScore).reduce((score1, score2) -> score1 + score2).orElse(0.0);
+        System.out.println(sumScore);
+    }
+
+    /**
+     * sorted limit skip
+     */
+    @Test
+    public void sortTest() {
+        //通过id排序,逆序
+        List<Student> sortedList =
+                studentList.stream().sorted(Comparator.comparing(Student::getId).reversed()).collect(Collectors.toList());
+        System.out.println(sortedList);
+
+        //获取前两名学生成绩
+        List<Student> top2Student =
+                studentList.stream().sorted(Comparator.comparing(Student::getMathScore).reversed()).limit(2).collect(Collectors.toList());
+        System.out.println(top2Student);
+
+        //取第二名学生
+        List<Student> secondStudent =
+                studentList.stream().sorted(Comparator.comparing(Student::getMathScore).reversed()).limit(2).skip(1).collect(Collectors.toList());
+        System.out.println(secondStudent);
+    }
+
+    /**
+     * 并行流测试
+     * 适用于每个线程数据独立
+     */
+    @Test
+    public void parallelTest(){
+        studentList.parallelStream().forEach(student -> System.out.println( student + Thread.currentThread().getName()));
+    }
+
+    /**
+     * 统计测试
+     * 主要用于int、double、long类型
+     */
+    @Test
+    public void statTest(){
+        DoubleSummaryStatistics statistics = studentList.stream().mapToDouble(Student::getMathScore).summaryStatistics();
+        System.out.println("最大值 "+statistics.getMax());
+        System.out.println("平均值 "+statistics.getAverage());
     }
 }
