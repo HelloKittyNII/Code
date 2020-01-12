@@ -127,8 +127,8 @@ public class StreamTest {
      * 适用于每个线程数据独立
      */
     @Test
-    public void parallelTest(){
-        studentList.parallelStream().forEach(student -> System.out.println( student + Thread.currentThread().getName()));
+    public void parallelTest() {
+        studentList.parallelStream().forEach(student -> System.out.println(student + Thread.currentThread().getName()));
     }
 
     /**
@@ -136,9 +136,51 @@ public class StreamTest {
      * 主要用于int、double、long类型
      */
     @Test
-    public void statTest(){
+    public void statTest() {
         DoubleSummaryStatistics statistics = studentList.stream().mapToDouble(Student::getMathScore).summaryStatistics();
-        System.out.println("最大值 "+statistics.getMax());
-        System.out.println("平均值 "+statistics.getAverage());
+        System.out.println("最大值 " + statistics.getMax());
+        System.out.println("平均值 " + statistics.getAverage());
+    }
+
+    /**
+     * 分组 group by 测试
+     */
+    @Test
+    public void groupByTest() {
+        Map<Double, List<Student>> listMap = studentList.stream().collect(Collectors.groupingBy(Student::getMathScore));
+        System.out.println(listMap);
+
+        Map<Boolean, List<Student>> booleanListMap = studentList.stream().collect(Collectors.partitioningBy(Student::isHigh));
+        System.out.println(booleanListMap);
+
+    }
+
+    /**
+     * peek map
+     */
+    @Test
+    public void peekAndMapTest() {
+        //只需要访问获取内部元素，打印
+        List<String> stringList1 = Lists.newArrayList("11", "22", "33");
+        stringList1.stream().peek(System.out::print).collect(Collectors.toList());
+
+        List<String> stringList2 = Lists.newArrayList("11", "22", "33");
+
+        //支持自定义返回值，将字符串转换为数字
+        List<Integer> mapResultList = stringList2.stream().map(s -> Integer.valueOf(s)).collect(Collectors.toList());
+        System.out.println(mapResultList);
+
+        //可以看到返回值还是List<String>
+        List<String> peekResultList = stringList2.stream().peek(s -> Integer.valueOf(s)).collect(Collectors.toList());
+        System.out.println(peekResultList);
+    }
+
+    /**
+     * 收集器测试
+     */
+    @Test
+    public void collectTest(){
+        Stack<Student> collect1 = studentList.stream().collect(Collectors.toCollection(Stack::new));
+        System.out.println(collect1);
     }
 }

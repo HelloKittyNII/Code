@@ -1,5 +1,7 @@
 package com.nii.java8.model;
 
+import org.junit.Before;
+
 import java.io.Serializable;
 
 /**
@@ -39,6 +41,7 @@ public class Student implements Serializable {
         this.isHigh = isHigh;
         this.mathScore = mathScore;
     }
+
 
     public Student() {
     }
@@ -84,4 +87,5 @@ public class Student implements Serializable {
                 ", mathScore=" + mathScore +
                 '}';
     }
+
 }
