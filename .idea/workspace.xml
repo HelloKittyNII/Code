@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6fff466e-484e-431e-ba52-1aaecef2b0b0" name="Default" comment="java8流测试">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basic/java8/src/main/java/com/nii/java8/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/basic/java8/src/main/java/com/nii/java8/model/Student.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/basic/java8/src/main/java/com/nii/java8/test/StreamTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/basic/java8/src/main/java/com/nii/java8/test/StreamTest.java" afterDir="false" />
     </list>
     <ignored path="Code.iws" />
@@ -141,14 +140,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="gradle" value="40" />
-          <entry key="java" value="2244" />
+          <entry key="java" value="2246" />
           <entry key="txt" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Groovy" value="40" />
-          <entry key="JAVA" value="2244" />
+          <entry key="JAVA" value="2246" />
           <entry key="PLAIN_TEXT" value="8" />
         </counts>
       </usages-collector>
@@ -163,7 +162,7 @@
         <entry file="file://$PROJECT_DIR$/basic/java8/src/main/java/com/nii/java8/test/StreamTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="397">
-              <caret line="184" column="5" selection-start-line="184" selection-start-column="5" selection-end-line="184" selection-end-column="5" />
+              <caret line="184" column="7" selection-start-line="184" selection-start-column="7" selection-end-line="184" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -1335,7 +1334,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1578824941126" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1578827526336" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="project.structure.last.edited" value="SDKs" />
@@ -1712,7 +1711,7 @@
       <workItem from="1578665536993" duration="78000" />
       <workItem from="1578749157879" duration="3147000" />
       <workItem from="1578753050813" duration="1316000" />
-      <workItem from="1578800728780" duration="11385000" />
+      <workItem from="1578800728780" duration="12594000" />
     </task>
     <task id="LOCAL-00001" summary="java8流测试">
       <created>1578752267711</created>
@@ -1735,7 +1734,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578804119996</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="java8流测试">
+      <created>1578825391452</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1578825391452</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1771,7 +1777,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26817000" />
+    <option name="totallyTimeSpent" value="28026000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -2070,7 +2076,7 @@
     <entry file="file://$PROJECT_DIR$/basic/java8/src/main/java/com/nii/java8/test/StreamTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="397">
-          <caret line="184" column="5" selection-start-line="184" selection-start-column="5" selection-end-line="184" selection-end-column="5" />
+          <caret line="184" column="7" selection-start-line="184" selection-start-column="7" selection-end-line="184" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

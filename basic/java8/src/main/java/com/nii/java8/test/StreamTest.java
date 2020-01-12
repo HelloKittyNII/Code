@@ -182,5 +182,5 @@ public class StreamTest {
     public void collectTest(){
         Stack<Student> collect1 = studentList.stream().collect(Collectors.toCollection(Stack::new));
         System.out.println(collect1);
-    }
+    }  
 }
