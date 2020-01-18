@@ -116,11 +116,11 @@
     <session id="-1143071538">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.5" value="1" />
-          <entry key="project.open.time.6" value="2" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.open.time.6" value="3" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -140,14 +140,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="gradle" value="40" />
-          <entry key="java" value="2246" />
+          <entry key="java" value="2281" />
           <entry key="txt" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Groovy" value="40" />
-          <entry key="JAVA" value="2246" />
+          <entry key="JAVA" value="2281" />
           <entry key="PLAIN_TEXT" value="8" />
         </counts>
       </usages-collector>
@@ -161,8 +161,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/basic/java8/src/main/java/com/nii/java8/test/StreamTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
-              <caret line="184" column="7" selection-start-line="184" selection-start-column="7" selection-end-line="184" selection-end-column="7" />
+            <state relative-caret-position="64">
+              <caret line="104" column="24" lean-forward="true" selection-start-line="104" selection-start-column="24" selection-end-line="104" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -173,7 +173,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/util/Stack.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
+            <state relative-caret-position="551">
               <caret line="52" column="11" selection-start-line="52" selection-start-column="11" selection-end-line="52" selection-end-column="11" />
             </state>
           </provider>
@@ -182,7 +182,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/basic/java8/src/main/java/com/nii/java8/model/Student.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
+            <state relative-caret-position="760">
               <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -194,7 +194,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/util/stream/Collectors.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
+            <state relative-caret-position="10412">
               <caret line="620" column="19" selection-start-line="620" selection-start-column="4" selection-end-line="620" selection-end-column="19" />
             </state>
           </provider>
@@ -203,7 +203,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/util/function/Supplier.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
+            <state relative-caret-position="323">
               <caret line="40" column="17" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
             </state>
           </provider>
@@ -1105,7 +1105,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="106" />
-    <option name="y" value="72" />
+    <option name="y" value="97" />
     <option name="width" value="1530" />
     <option name="height" value="965" />
   </component>
@@ -1135,9 +1135,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -1329,12 +1326,15 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1578827526336" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1579352550692" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="project.structure.last.edited" value="SDKs" />
@@ -1361,7 +1361,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.StreamTest.groupByTest">
+  <component name="RunManager" selected="JUnit.StreamTest.sortTest">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="DEPLOY" value="true" />
@@ -1529,23 +1529,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StreamTest.parallelTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="java8_main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.nii.java8.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.nii.java8.test" />
-      <option name="MAIN_CLASS_NAME" value="com.nii.java8.test.StreamTest" />
-      <option name="METHOD_NAME" value="parallelTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="StreamTest.peekAndMapTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="java8_main" />
       <extension name="coverage">
@@ -1574,6 +1557,23 @@
       <option name="PACKAGE_NAME" value="com.nii.java8.test" />
       <option name="MAIN_CLASS_NAME" value="com.nii.java8.test.StreamTest" />
       <option name="METHOD_NAME" value="peekTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StreamTest.sortTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="java8_main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.nii.java8.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.nii.java8.test" />
+      <option name="MAIN_CLASS_NAME" value="com.nii.java8.test.StreamTest" />
+      <option name="METHOD_NAME" value="sortTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
@@ -1677,19 +1677,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="JUnit.StreamTest.parallelTest" />
       <item itemvalue="JUnit.StreamTest.statTest" />
       <item itemvalue="JUnit.StreamTest.peekTest" />
       <item itemvalue="JUnit.StreamTest.peekAndMapTest" />
       <item itemvalue="JUnit.StreamTest.groupByTest" />
+      <item itemvalue="JUnit.StreamTest.sortTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.StreamTest.groupByTest" />
+        <item itemvalue="JUnit.StreamTest.sortTest" />
         <item itemvalue="JUnit.StreamTest.peekAndMapTest" />
+        <item itemvalue="JUnit.StreamTest.groupByTest" />
         <item itemvalue="JUnit.StreamTest.peekTest" />
         <item itemvalue="JUnit.StreamTest.statTest" />
-        <item itemvalue="JUnit.StreamTest.parallelTest" />
       </list>
     </recent_temporary>
   </component>
@@ -1711,7 +1711,8 @@
       <workItem from="1578665536993" duration="78000" />
       <workItem from="1578749157879" duration="3147000" />
       <workItem from="1578753050813" duration="1316000" />
-      <workItem from="1578800728780" duration="12594000" />
+      <workItem from="1578800728780" duration="13243000" />
+      <workItem from="1579352174088" duration="605000" />
     </task>
     <task id="LOCAL-00001" summary="java8流测试">
       <created>1578752267711</created>
@@ -1741,16 +1742,17 @@
       <option name="project" value="LOCAL" />
       <updated>1578825391452</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="java8流测试">
+      <created>1578832549314</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1578832549314</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="StreamTest_sortTest - 2020.01.12 at 12h 24m 51s.xml">
-      <configuration name="StreamTest.sortTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="StreamTest_sortTest - 2020.01.12 at 12h 27m 44s.xml">
-      <configuration name="StreamTest.sortTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="StreamTest_sortTest - 2020.01.12 at 12h 28m 02s.xml">
       <configuration name="StreamTest.sortTest" configurationId="JUnit" />
     </history-entry>
@@ -1775,9 +1777,15 @@
     <history-entry file="StreamTest_groupByTest - 2020.01.12 at 17h 49m 26s.xml">
       <configuration name="StreamTest.groupByTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="StreamTest_peekAndMapTest - 2020.01.12 at 21h 58m 47s.xml">
+      <configuration name="StreamTest.peekAndMapTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="StreamTest_sortTest - 2020.01.18 at 20h 59m 22s.xml">
+      <configuration name="StreamTest.sortTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28026000" />
+    <option name="totallyTimeSpent" value="29280000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1789,10 +1797,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="85" y="58" width="1224" height="772" extended-state="0" />
+    <frame x="85" y="78" width="1224" height="772" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15780446" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12950258" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -1801,8 +1809,8 @@
       <window_info id="Image Layers" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.19805194" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.14610389" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.19805194" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.14448053" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32922536" />
@@ -1936,12 +1944,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/desktop/src/main/resources/fxml/LoginUI.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-69">
           <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/client/desktop/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
@@ -1978,10 +1986,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="179">
           <caret line="5002" column="32" selection-start-line="5002" selection-start-column="32" selection-end-line="5002" selection-end-column="32" />
-          <folding>
-            <element signature="e#223144#223145#0" expanded="true" />
-            <element signature="e#223197#223198#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1989,10 +1993,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="179">
           <caret line="265" column="13" selection-start-line="265" selection-start-column="13" selection-end-line="265" selection-end-column="13" />
-          <folding>
-            <element signature="e#9141#9142#0" expanded="true" />
-            <element signature="e#9199#9200#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2042,23 +2042,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/util/Stack.java">
+    <entry file="file://$PROJECT_DIR$/basic/java8/src/main/java/com/nii/java8/test/StreamTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="52" column="11" selection-start-line="52" selection-start-column="11" selection-end-line="52" selection-end-column="11" />
+        <state relative-caret-position="64">
+          <caret line="104" column="24" lean-forward="true" selection-start-line="104" selection-start-column="24" selection-end-line="104" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/util/function/Supplier.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/util/Stack.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="40" column="17" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
+        <state relative-caret-position="551">
+          <caret line="52" column="11" selection-start-line="52" selection-start-column="11" selection-end-line="52" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/basic/java8/src/main/java/com/nii/java8/model/Student.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
+        <state relative-caret-position="760">
           <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -2068,18 +2071,15 @@
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/util/stream/Collectors.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
+        <state relative-caret-position="10412">
           <caret line="620" column="19" selection-start-line="620" selection-start-column="4" selection-end-line="620" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/basic/java8/src/main/java/com/nii/java8/test/StreamTest.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/util/function/Supplier.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="184" column="7" selection-start-line="184" selection-start-column="7" selection-end-line="184" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="323">
+          <caret line="40" column="17" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
         </state>
       </provider>
     </entry>

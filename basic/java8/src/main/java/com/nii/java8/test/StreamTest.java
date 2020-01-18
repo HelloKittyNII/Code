@@ -120,6 +120,9 @@ public class StreamTest {
         List<Student> secondStudent =
                 studentList.stream().sorted(Comparator.comparing(Student::getMathScore).reversed()).limit(2).skip(1).collect(Collectors.toList());
         System.out.println(secondStudent);
+
+        sortedList.sort(Comparator.comparing(Student::getMathScore));
+        System.out.println(studentList);
     }
 
     /**
@@ -182,5 +185,6 @@ public class StreamTest {
     public void collectTest(){
         Stack<Student> collect1 = studentList.stream().collect(Collectors.toCollection(Stack::new));
         System.out.println(collect1);
-    }  
+    }
+
 }
